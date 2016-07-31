@@ -4,10 +4,10 @@
   "description": "to build front sources with webpack",
   "main": " ",
   "scripts": {
-    "cleanBuild": "node task/clean.js",
-    "build": "npm run cleanBuild && webpack --progress -p",
-    "watch": "npm run cleanBuild && webpack --progress -d --watch",
-    "test": "webpack test/*.test.js test/dist/testBundle.js --target node --config test/webpack.config.js && mocha test/dist/testBundle.js"
+    "clean": "node task/clean.js",
+    "build": "npm run clean && webpack --progress -p",
+    "watch": "npm run clean && webpack --progress -d --watch",
+    "test": "npm run clean && webpack test/*.test.js test-bundle/bundle.js --target node --config test/webpack.config.js && mocha test-bundle/bundle.js"
   },
   "author": "intoday_@naver.com",
   "license": "ISC",
