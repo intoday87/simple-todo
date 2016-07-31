@@ -1,0 +1,31 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "to build front sources with webpack",
+  "main": " ",
+  "scripts": {
+    "cleanBuild": "node task/clean.js",
+    "build": "npm run cleanBuild && webpack --progress -p",
+    "watch": "npm run cleanBuild && webpack --progress -d --watch",
+    "test": "webpack test/*.test.js test/dist/testBundle.js --target node --config test/webpack.config.js && mocha test/dist/testBundle.js"
+  },
+  "author": "intoday_@naver.com",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "css-loader": "0.23.1",
+    "eslint": "2.13.1",
+    "eslint-friendly-formatter": "2.0.5",
+    "eslint-loader": "1.3.0",
+    "handlebars": "4.0.5",
+    "handlebars-loader": "1.3.0",
+    "mocha": "2.5.3",
+    "node-sass": "^3.7.0",
+    "postcss-import": "^8.1.2",
+    "postcss-loader": "^0.9.1",
+    "redux": "^3.5.2",
+    "sass-loader": "^3.2.0",
+    "style-loader": "0.13.1",
+    "webpack": "1.13.1"
+  }
+}
