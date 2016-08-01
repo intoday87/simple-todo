@@ -1,14 +1,14 @@
 var path = require('path');
+var context = path.resolve(__dirname, '..');
 
 module.exports = {
-  context: __dirname,
+  context: context,
   module: {
     preLoaders: [
       {
         test   : /\.js$/,
         exclude: [
-          path.resolve(__dirname, 'node_modules'),
-          path.resolve(__dirname, 'external')
+          path.resolve(context, 'node_modules')
         ],
         loader : 'eslint'
       }
@@ -31,6 +31,16 @@ module.exports = {
         loader: 'handlebars'
       }
     ]
+  },
+
+  resolve: {
+    modulesDirectories: [
+      'node_modules',
+      'components'
+    ],
+
+    alias: {
+    }
   },
 
   eslint: {

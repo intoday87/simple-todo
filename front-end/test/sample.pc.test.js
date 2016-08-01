@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var sampleInjector = require('inject!../components/sample.pc/main');
+var sample = require('../components/sample.pc/main');
 
 describe('Sample PC', function() {
   it('should not be undefined', function () {

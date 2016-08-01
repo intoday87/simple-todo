@@ -1,10 +1,10 @@
 define([
-  './main.hbs'
+    './main.hbs'
   ],
   function (tmpl) {
-  return {
-    build: function (option) {
-      option.$parent.html(tmpl);
-    }
-  };
-});
+    return {
+      build: function (option) {
+        option.$parent.html(tmpl);
+      }
+    };
+  });
