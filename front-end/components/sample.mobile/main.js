@@ -1,10 +1,8 @@
-define([
-    './main.hbs'
-  ],
-  function (tmpl) {
+define(function (require) {
+    var tmpl = require('./main.hbs');
     return {
       build: function (option) {
-        option.$parent.html(tmpl);
+        option.$parent.html(tmpl());
       }
     };
   });

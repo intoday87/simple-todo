@@ -1,24 +1,31 @@
-var expect = require('chai').expect;
-var sampleInjector = require('inject!../components/sample.mobile/main');
-var sinon = require('sinon');
-var mainHbsMock = sinon.spy();
-var sample = sampleInjector({
-  './main.hbs': mainHbsMock
-});
-
 describe('Sample mobile', function () {
+  var should = require('should');
+  var sinon = require('sinon');
+  var sample;
+
   it('should not be undefined', function () {
-    expect(sample).to.not.be.undefined;
+    sample = require('../components/sample.mobile/main');
+    should.exist(sample);
   });
 
   it('should call template function when it called build', function () {
-    var $mock = {
-      html : function () {}
+    var optionMock = {
+      html: function () {
+      }
     };
-    sinon.spy($mock, "html");
-    sample.build({
-      $parent: $mock
+    sinon.spy(optionMock, "html");
+
+    var mainHbsSpy = sinon.spy();
+
+    var sampleFactory = require('proxy!../components/sample.mobile/main');
+    sample = sampleFactory({
+        './main.hbs': mainHbsSpy
     });
-    expect($mock.called).to.be.true;
+    sample.build({
+      $parent: optionMock
+    });
+
+    should.ok(optionMock.html.called, '$parent.html didn\'t called.');
+    should.ok(mainHbsSpy.called, 'templete didn\'t called.');
   });
 });
