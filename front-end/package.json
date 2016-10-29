@@ -30,11 +30,12 @@
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
     "proxy-loader": "0.0.10",
-    "redux": "^3.5.2",
+    "redux": "3.5.2",
     "sass-loader": "^3.2.0",
     "should": "10.0.0",
     "sinon": "2.0.0-pre.2",
     "style-loader": "0.13.1",
+    "underscore": "1.8.3",
     "webpack": "1.13.1"
   }
 }

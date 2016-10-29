@@ -54,7 +54,8 @@ module.exports = {
   resolve: {
     modulesDirectories: [
       'node_modules',
-      'components'
+      'components',
+      'modules'
     ],
 
     alias: {}
