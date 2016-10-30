@@ -13,7 +13,7 @@ define(function (require) {
 
       switch (action.type) {
         case 'SAMPLE':
-          return _.extend({}, state, {});
+          return _.extend({}, state, action.state);
         default:
           return state;
       }

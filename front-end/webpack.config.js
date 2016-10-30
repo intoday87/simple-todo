@@ -3,7 +3,8 @@ var path = require('path');
 module.exports = {
   context: __dirname,
   entry  : {
-    'sample.pc': './entries/sample'
+    'sample.pc'    : './entries/sample.pc',
+    'sample.mobile': './entries/sample.mobile'
   },
 
   output: {
