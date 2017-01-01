@@ -42,6 +42,10 @@ module.exports = {
       {
         test  : /\.hbs$/,
         loader: 'handlebars'
+      },
+      {
+        test: /\.jsx?$/,
+        loaders: ['react-hot', 'babel']
       }
     ]
   },
