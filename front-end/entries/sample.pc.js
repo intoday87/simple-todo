@@ -3,5 +3,5 @@ define([
 ], function (sample) {
   return {
     sample: sample
-  }
+  };
 });

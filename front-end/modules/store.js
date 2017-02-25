@@ -11,5 +11,5 @@ define(function () {
     getState: function () {
       return store.getState();
     }
-  }
+  };
 });

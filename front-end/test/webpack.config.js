@@ -6,7 +6,7 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test   : /\.js$/,
+        test   : /\.(js|jsx)$/,
         exclude: [
           path.resolve(context, 'node_modules')
         ],
@@ -39,7 +39,7 @@ module.exports = {
       'components',
       'modules'
     ],
-
+    extensions: [''/*for react*/, '.js', '.jsx'],
     alias: {
     }
   },

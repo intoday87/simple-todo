@@ -6,5 +6,5 @@ define([
   return {
     store : store,
     sample: sample
-  }
+  };
 });

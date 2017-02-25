@@ -8,7 +8,7 @@ define(function (require) {
         return {
           email: '',
           name : ''
-        }
+        };
       }
 
       switch (action.type) {

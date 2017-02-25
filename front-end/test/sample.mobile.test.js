@@ -13,13 +13,13 @@ describe('Sample mobile', function () {
       html: function () {
       }
     };
-    sinon.spy(optionMock, "html");
+    sinon.spy(optionMock, 'html');
 
     var mainHbsSpy = sinon.spy();
 
     var sampleFactory = require('proxy!../components/sample.mobile/main');
     sample = sampleFactory({
-        './main.hbs': mainHbsSpy
+      './main.hbs': mainHbsSpy
     });
     sample.build({
       $parent: optionMock

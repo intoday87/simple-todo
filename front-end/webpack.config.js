@@ -4,6 +4,7 @@ module.exports = {
   context: __dirname,
   entry  : {
     'sample.pc'    : './entries/sample.pc',
+    'list.mobile'  : './entries/list.mobile',
     'sample.mobile': './entries/sample.mobile'
   },
 
@@ -19,7 +20,7 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test   : /\.js$/,
+        test   : /\.(js|jsx)$/,
         exclude: [
           path.resolve(__dirname, 'node_modules')
         ],
@@ -62,7 +63,7 @@ module.exports = {
       'components',
       'modules'
     ],
-
+    extensions: [''/*for react*/, '.js', '.jsx'],
     alias: {}
   },
 
