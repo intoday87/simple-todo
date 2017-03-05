@@ -30,10 +30,6 @@ module.exports = {
       "error",
       "single"
     ],
-    "semi"           : [
-      "error",
-      "always"
-    ],
     "no-unused-vars" : 0,
     "quote-props"    : [2, "as-needed", {keywords: true}]
   },

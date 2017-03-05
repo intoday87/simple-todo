@@ -1,5 +1,5 @@
 define([
-  'list.mobile/main'
+  'list.mobile/'
 ], function (list) {
   return {
     list: list
