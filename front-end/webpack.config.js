@@ -47,6 +47,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loaders: ['react-hot', 'babel']
+      },
+      {
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'components/list.mobile'),
+        loader: 'babel'
       }
     ]
   },
